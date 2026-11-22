@@ -22,6 +22,7 @@ export interface ProjectItem {
     | "Audio Deep Learning";
   featured: boolean;
   statusBadge: string;
+  image: string;
   shortDescription: string;
   fullDescription: string;
   problemStatement: string;
@@ -41,8 +42,9 @@ export const projects: ProjectItem[] = [
     category: "Predictive ML",
     featured: true,
     statusBadge: "253 Tests Passed • Production ML",
+    image: "/projects/smartdist-ai.png",
     shortDescription:
-      "Enterprise distribution and retail management platform integrating LightGBM & XGBoost demand forecasting (13.09% WAPE), inventory optimization, and anomaly detection.",
+      "Enterprise retail forecasting platform combining LightGBM & XGBoost (13.09% WAPE) across 54 stores with inventory optimization.",
     fullDescription:
       "SmartDist AI is a data-driven distribution and retail operations platform that integrates multi-horizon machine learning demand forecasting (7, 14, and 30 days) on 648,648 historical daily sales records across 54 stores, operations-research inventory procurement optimization, multi-evidence anomaly detection, and a deterministic offline-first business assistant.",
     problemStatement:
@@ -101,8 +103,9 @@ export const projects: ProjectItem[] = [
     category: "Generative AI & RAG",
     featured: true,
     statusBadge: "Live Demo • LangGraph Agent",
+    image: "/projects/bizintel-ai.png",
     shortDescription:
-      "Full-stack BI platform combining ML revenue forecasting, anomaly detection, RAG, and a LangGraph agentic workflow with tool calling and 296 passing tests.",
+      "Agentic business intelligence combining LangGraph tool calling, revenue forecasting, operational RAG, and 296 passing tests.",
     fullDescription:
       "BizIntel AI is a business intelligence and decision-support platform that combines a PostgreSQL 17 analytics layer, machine-learning revenue forecasting, anomaly detection, Retrieval-Augmented Generation (RAG), and a LangGraph agentic workflow with tool calling, per-session conversation memory, audit logging, and a deterministic evaluation harness inside a custom Next.js 16 dashboard.",
     problemStatement:
@@ -139,8 +142,9 @@ export const projects: ProjectItem[] = [
     category: "Generative AI & RAG",
     featured: true,
     statusBadge: "Live Demo • Multimodal Voice & OCR",
+    image: "/projects/catat-ai.png",
     shortDescription:
-      "Multimodal AI bookkeeping app for small merchants that turns colloquial Indonesian chat, Whisper voice notes, and receipt photos into financial dashboards.",
+      "Multimodal bookkeeping web app turning colloquial Indonesian chat, Whisper voice notes, and receipt photos into financial dashboards.",
     fullDescription:
       "CatatAI helps micro and small merchants record daily finances effortlessly using natural Indonesian warung expressions ('utang galon', 'kulakan', 'bon', 'bayar separo'). Users can type via chat, speak via voice recording (Whisper transcription), or snap receipt photos (multimodal vision OCR) to automatically log transactions and generate financial insights.",
     problemStatement:
@@ -176,8 +180,9 @@ export const projects: ProjectItem[] = [
     category: "Generative AI & RAG",
     featured: false,
     statusBadge: "Vector RAG • Server-Validated Citations",
+    image: "/projects/researchflow-ai.png",
     shortDescription:
-      "Autonomous research pipeline that plans queries, indexes sources into a local vector DB, validates inline citations server-side, and exports PDF reports.",
+      "Autonomous research pipeline executing query decomposition, vector indexing, server-side citation validation, and PDF export.",
     fullDescription:
       "ResearchFlow AI transforms a single research question into a multi-stage research plan, searches and extracts sources into a local vector database, synthesizes grounded reports with server-validated inline citations in Markdown and PDF formats, and supports scheduled automated delivery to Discord.",
     problemStatement:
@@ -210,8 +215,9 @@ export const projects: ProjectItem[] = [
     category: "Audio Deep Learning",
     featured: false,
     statusBadge: "790 Audio Records • 2D CNN + SLM",
+    image: "/projects/tahsin-qiroah.png",
     shortDescription:
-      "Deep learning speech assessment system combining a 2D CNN on Mel-spectrograms with Qwen2.5-1.5B-Instruct SLM to evaluate Arabic ghunnah pronunciation.",
+      "Deep learning speech assessment system combining 2D CNN Mel-spectrograms with Qwen2.5-1.5B SLM pedagogical feedback.",
     fullDescription:
       "Developed as a bachelor's thesis at Universitas Darussalam Gontor, this system evaluates Arabic ghunnah pronunciation from audio recordings. It extracts Mel-spectrograms and MFCCs from 790 curated recordings across 200 speakers, classifies pronunciation accuracy using a 2D Convolutional Neural Network (70.51% test accuracy), and integrates Qwen2.5-1.5B-Instruct SLM to generate natural pedagogical feedback in Indonesian.",
     problemStatement:
@@ -244,8 +250,9 @@ export const projects: ProjectItem[] = [
     category: "Predictive ML",
     featured: false,
     statusBadge: "TFX + Docker • 97.16% Binary Accuracy",
+    image: "/projects/mlops-pipeline.png",
     shortDescription:
-      "Automated Machine Learning Operations (MLOps) pipeline built with TensorFlow Extended (TFX), Apache Beam, Bi-LSTM, Dockerized TF Serving, and Prometheus/Grafana.",
+      "Automated TFX MLOps pipeline for sentiment classification with Bi-LSTM (97.16% acc), TF Serving Docker, and Prometheus/Grafana.",
     fullDescription:
       "An end-to-end MLOps pipeline for automated customer sentiment classification across 7,920 product tweets. Orchestrated using TensorFlow Extended (TFX) and Apache Beam with SQLite metadata tracking, the pipeline automates data ingestion, schema validation, TensorFlow Transform preprocessing, KerasTuner RandomSearch, Bidirectional LSTM training (97.16% Binary Accuracy, 0.73 AUC), TFMA model blessing gates, and containerized TensorFlow Serving monitored in real time via Prometheus and Grafana.",
     problemStatement:
@@ -280,8 +287,9 @@ export const projects: ProjectItem[] = [
     category: "Predictive ML",
     featured: false,
     statusBadge: "Live Streamlit App • Random Forest + Metabase",
+    image: "/projects/edutech-dropout.png",
     shortDescription:
-      "End-to-end Edutech analytics solving a 32.1% student dropout rate using Random Forest classification, Supabase PostgreSQL, Metabase BI, and a live Streamlit app.",
+      "Edutech student retention analytics and early-warning model deployed live on Streamlit Cloud solving a 32.1% dropout rate.",
     fullDescription:
       "Developed to address a 32.1% student dropout challenge at Jaya Jaya Institut, this project combines exploratory academic and socio-economic analysis, a Supabase PostgreSQL data warehouse, an interactive Metabase executive dashboard, and a deployed Random Forest classification web application on Streamlit Cloud for early at-risk student intervention.",
     problemStatement:
@@ -318,8 +326,9 @@ export const projects: ProjectItem[] = [
     category: "Predictive ML",
     featured: false,
     statusBadge: "58.3K Shopee Reviews • 92.20% LSTM Accuracy",
+    image: "/projects/sentiment-analysis.png",
     shortDescription:
-      "End-to-end Indonesian NLP sentiment analysis across 58,300 Shopee Google Play Store reviews comparing Stacked LSTM (92.20%), Bi-GRU (92.11%), Logistic Regression (91.37%), and DNN.",
+      "NLP sentiment analysis on 58.3K Shopee reviews comparing Stacked LSTM (92.20% acc), Bi-GRU, Logistic Regression, and DNN.",
     fullDescription:
       "A comprehensive Natural Language Processing (NLP) workflow analyzing 58,300 cleaned Indonesian user reviews (from 90,000 scraped records) of the Shopee application on Google Play Store. Features Indonesian slang normalization, lexicon-based polarity labeling (Positive, Negative, Neutral), and multi-architecture benchmarking across Stacked LSTM (92.20%), Bidirectional GRU (92.11%), Logistic Regression with RandomizedSearchCV (91.37%), and Deep Neural Networks (90.42%).",
     problemStatement:
@@ -354,8 +363,9 @@ export const projects: ProjectItem[] = [
     category: "Predictive ML",
     featured: false,
     statusBadge: "7,043 Customers • SQL + Streamlit",
+    image: "/projects/customer-churn-analytics.png",
     shortDescription:
-      "End-to-end churn analytics on 7,043 telecom customers combining SQL cohort analysis, a leakage-safe Scikit-learn risk model, and a Streamlit campaign ROI simulator.",
+      "Retention analytics on 7,043 telecom customers with SQL cohort analysis, Scikit-learn risk modeling, and a Streamlit ROI simulator.",
     fullDescription:
       "An end-to-end retention analytics system analyzing 7,043 subscription customers ($456,116 monthly revenue, 26.54% churn rate). It combines SQL and Pandas cohort analysis to isolate high-risk segments (42.71% churn in month-to-month contracts), trains a leakage-safe Scikit-learn probability model to rank at-risk customers, and delivers an interactive Streamlit dashboard for retention worklists and campaign ROI backtesting.",
     problemStatement:
@@ -388,8 +398,9 @@ export const projects: ProjectItem[] = [
     category: "Computer Vision",
     featured: false,
     statusBadge: "MTCNN + FaceNet • 30 FPS OpenCV",
+    image: "/projects/face-recognition.png",
     shortDescription:
-      "Real-time deep learning facial recognition pipeline using MTCNN for face alignment and pretrained FaceNet (Keras) for 128-D Cosine Distance verification.",
+      "Real-time facial identity verification with MTCNN face alignment, pretrained FaceNet 128-D embeddings, and OpenCV at 30 FPS.",
     fullDescription:
       "An end-to-end computer vision pipeline for real-time facial identity verification. It detects and crops faces from images or live webcam streams using Multi-task Cascaded Convolutional Networks (MTCNN), standardizes inputs to 160x160 pixels, extracts 128-dimensional L2-normalized embedding vectors via pretrained FaceNet, and verifies identity using Cosine Distance thresholding.",
     problemStatement:

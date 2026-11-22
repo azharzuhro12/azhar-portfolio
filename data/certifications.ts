@@ -2,6 +2,7 @@ export interface CertificationItem {
   id: string;
   title: string;
   issuer: string;
+  issuerShort: string;
   issuerBadge?: string;
   issueDate: string;
   validThrough?: string;
@@ -20,6 +21,7 @@ export const certifications: CertificationItem[] = [
     id: "idcamp-expert-ai-2025",
     title: "IDCamp 2025 Level Expert: AI Engineer",
     issuer: "Dicoding Indonesia & Indosat Ooredoo Hutchison",
+    issuerShort: "Dicoding & Indosat",
     issuerBadge: "Level Expert",
     issueDate: "20 Agustus 2026",
     credentialId: "IDCAMP2025/L3-AI-002",
@@ -42,6 +44,7 @@ export const certifications: CertificationItem[] = [
     id: "lintasarta-mahir-ml-2024",
     title: "Machine Learning Developer (Level Mahir / Expert)",
     issuer: "Lintasarta Cloudeka Digischool 2023 & Dicoding",
+    issuerShort: "Lintasarta & Dicoding",
     issuerBadge: "Level Mahir (Expert)",
     issueDate: "19 Juni 2024",
     credentialId: "Digischool/L2-ML-014",
@@ -64,6 +67,7 @@ export const certifications: CertificationItem[] = [
     id: "dcml-tensorflow-2026",
     title: "Dev Certification for Machine Learning with TensorFlow (DCML)",
     issuer: "dev.id Certification",
+    issuerShort: "dev.id",
     issuerBadge: "Certified Developer",
     issueDate: "15 July 2026",
     validThrough: "15 July 2029",
@@ -87,6 +91,7 @@ export const certifications: CertificationItem[] = [
     id: "idcamp-data-scientist-2024",
     title: "IDCamp 2024 Level Expert: Data Scientist",
     issuer: "Dicoding Indonesia & Indosat Ooredoo Hutchison",
+    issuerShort: "Dicoding & Indosat",
     issuerBadge: "Level Expert",
     issueDate: "2024",
     credentialId: "IDCAMP2024/L3-DS-014",

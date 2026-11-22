@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, CheckCircle2, Layers, ExternalLink } from "lucide-react";
 import { GithubIcon } from "@/components/ui/Icons";
@@ -83,6 +84,18 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
 
             {/* Body */}
             <div className="flex-1 overflow-y-auto p-6 space-y-6">
+              {/* Screenshot Preview */}
+              {project.image && (
+                <div className="relative h-56 sm:h-72 w-full overflow-hidden rounded-xl border border-[var(--surface-border)] bg-[var(--background)] shadow-inner">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
+              )}
+
               <div>
                 <h2 className="text-2xl font-semibold text-[var(--foreground)]">
                   {project.title}
