@@ -174,6 +174,67 @@ export const projects: ProjectItem[] = [
     demoUrl: "https://catat-ai-azhars-projects-da34b643.vercel.app"
   },
   {
+    id: "ai-chatbot-rag",
+    title: "AI Chatbot — RAG Knowledge Base",
+    subtitle: "Multi-Format Document Ingestion, Hybrid Retrieval & Conversational RAG",
+    category: "Generative AI & RAG",
+    featured: true,
+    statusBadge: "10/10 Tests Passed • Hybrid Vector RAG",
+    image: "/projects/ai-chatbot.png",
+    shortDescription:
+      "Full-stack RAG chatbot platform answering user queries from admin-uploaded documents (PDF, DOCX, TXT, MD) with zero-login public access.",
+    fullDescription:
+      "A full-stack Retrieval-Augmented Generation (RAG) knowledge base and customer-support chatbot platform built with FastAPI, Next.js 14, and PostgreSQL 16 (pgvector). Users can immediately ask questions in Indonesian or English without a login barrier, while administrators manage source documents (PDF, DOCX, TXT, Markdown), inspect indexed chunks, review usage analytics, and monitor audit logs. When a topic is not present in the source documents, the chatbot avoids hallucination and directs the user to contact the administrator.",
+    problemStatement:
+      "Organizations and support teams spend significant time answering repetitive questions across scattered PDF and Word documents while standard chatbots often hallucinate unverified policies.",
+    solutionHighlights: [
+      "Engineered a hybrid 384-D semantic vector + fuzzy keyword retrieval engine with multi-turn follow-up context, typo normalization, and conversational greeting handling.",
+      "Built an automated multi-format ingestion pipeline supporting PDF (page-preserving), DOCX, TXT, and Markdown with configurable chunking and file magic-byte security checks.",
+      "Implemented strict grounding verification that prevents hallucinated answers and directs users to the administrator when information is absent from source documents.",
+      "Delivered a complete admin console with document versioning, re-indexing, real-time query analytics, Argon2id + JWT authentication, and 10/10 passing Pytest suites."
+    ],
+    metrics: [
+      { label: "Retrieval Engine", value: "384-D Hybrid RAG" },
+      { label: "Supported Formats", value: "PDF, DOCX, MD, TXT" },
+      { label: "Database", value: "PostgreSQL 16 + pgvector" },
+      { label: "Test Suite", value: "10/10 Passed" }
+    ],
+    architecture: [
+      {
+        layer: "Presentation Layer",
+        component: "Next.js 14 App Router + TypeScript",
+        role: "No-login conversational chat UI, rich Markdown renderer & Admin knowledge console"
+      },
+      {
+        layer: "RAG & Retrieval Engine",
+        component: "384-D Vector + Fuzzy Lexical Search",
+        role: "Follow-up context expansion, typo tolerance, deduplication & grounding verifier"
+      },
+      {
+        layer: "Document Processing",
+        component: "FastAPI + PyPDF + python-docx + Celery",
+        role: "Page-aware text extraction, semantic chunking, version replacement & vector indexing"
+      },
+      {
+        layer: "Storage & Security",
+        component: "PostgreSQL 16 + Redis 7 + Argon2id",
+        role: "16 normalized tables, RBAC, refresh token rotation, rate limiting & audit trail"
+      }
+    ],
+    technologies: [
+      "Python",
+      "FastAPI",
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "pgvector",
+      "RAG",
+      "Redis",
+      "Docker"
+    ],
+    githubUrl: "https://github.com/azharzuhro12/AI-chatbot"
+  },
+  {
     id: "researchflow-ai",
     title: "ResearchFlow AI",
     subtitle: "Autonomous AI Research & Citation Validation Platform",
